@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalkulator wydatków</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h2>Kalkulator wydatków</h2>
+    <div class="container">
+      <h4>Twoje saldo</h4>
+      <h1 id="balance">0,00 zł</h1>
+
+      <div class="inc-exp-container">
+        <div>
+          <h4>Wpływy</h4>
+          <p id="money-plus" class="money plus">+0,00 zł</p>
+        </div>
+        <div>
+          <h4>Wydatki</h4>
+          <p id="money-minus" class="money minus">-0,00 zł</p>
+        </div>
+      </div>
+
+      <h3>Historia</h3>
+      <ul id="list" class="list">
+        <li class="minus">
+          Wypłata <span>-400,00 zł</span> <button class="delete-btn">x</button>
+        </li>
+      </ul>
+
+      <h3>Dodaj nową transakcję</h3>
+      <form id="form">
+        <div class="form-control">
+          <label for="text">Tekst</label>
+          <input
+            type="text"
+            id="text"
+            placeholder="Wpisz tytuł transakcji..."
+          />
+        </div>
+        <div class="form-control">
+          <label for="amount"
+            >Kwota <br />(minus - wydatek, plus - wpłata)</label
+          >
+          <input type="number" id="amount" placeholder="Wpisz kwotę..." />
+        </div>
+        <button class="btn">Dodaj transakcję</button>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
